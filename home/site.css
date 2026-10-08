@@ -199,7 +199,7 @@ h3{font:700 22px/1.2 var(--f-body);letter-spacing:-.01em}
 /* ---------- FAQ ---------- */
 .faq{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;align-items:stretch}
 .faq .qs{display:flex;flex-direction:column;gap:12px}
-.faq .ph{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:420px}
+.faq .ph{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:0}
 .faq .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
 .faq details{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md)}
 .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 22px;font-weight:600;font-size:17px}
@@ -449,3 +449,19 @@ html:not(.ready) *,html:not(.ready) *::before,html:not(.ready) *::after{transiti
 /* inner page hero: same layout as the homepage hero, slightly smaller H1 so the CTA stays above the fold */
 .hero.inner .grid{min-height:640px}
 .hero.inner h1{font-size:clamp(40px,3.6vw,54px)}
+
+/* incomplete rows are centred with flex, never stranded on the left (L-145 / L-215) */
+.revs.five{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.revs.five figure{flex:0 1 calc((100% - 32px) / 3)}
+@media (max-width:1180px){
+  .revs.five figure{flex-basis:calc((100% - 16px) / 2)}
+  .posts{display:flex;flex-wrap:wrap;justify-content:center}
+  .posts > *{flex:0 1 calc((100% - 20px) / 2)}
+}
+@media (min-width:601px) and (max-width:900px){
+  .who,.tips,.svc{display:flex;flex-wrap:wrap;justify-content:center}
+  .who > *,.tips > *,.svc > *{flex:0 1 calc((100% - 20px) / 2)}
+}
+@media (max-width:600px){
+  .revs.five figure,.posts > *{flex-basis:100%}
+}
