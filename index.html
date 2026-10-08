@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Big Easy Mobile Welders Homepage</title>
+<!-- SEO title for WordPress (SEOPress): Mobile Welding in New Orleans, LA | Big Easy Mobile Welders -->
+<meta name="description" content="Big Easy Mobile Welders brings licensed, insured mobile welding to homes and businesses across New Orleans. Get a free estimate today.">
+<link rel="canonical" href="https://www.bigeasymobilewelders.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Big Easy Mobile Welders">
+<meta property="og:title" content="Mobile Welding in New Orleans, LA | Big Easy Mobile Welders">
+<meta property="og:description" content="Big Easy Mobile Welders brings licensed, insured mobile welding to homes and businesses across New Orleans. Get a free estimate today.">
+<meta property="og:url" content="https://www.bigeasymobilewelders.com/">
+<meta property="og:image" content="https://www.bigeasymobilewelders.com/wp-content/uploads/2026/07/storm-damage-welding-repair-new-orleans.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="preload" as="image" href="home/video/hero-poster.webp" imagesrcset="home/video/hero-poster-m.webp 960w, home/video/hero-poster.webp 1920w" imagesizes="(max-width:900px) 100vw, 54vw">
+<style>
+/* Layout: Arc Light. Dark hero split by a weld seam, then alternating steel-paper and night bands; every head is a split (question left, answer right). */
+:root{
+  --navy:#192A56; --yellow:#FFEB01; --yellow-hi:#FFF36B; --blue:#2388DA;
+  --night:#0B1226; --night-2:#121B33; --night-line:#26304A; --on-night:#F3F5FA; --on-night-soft:#B9C2D6; --steel:#7D88A1;
+  --paper:#EEF1F5; --paper-2:#E3E8EF; --card:#FFFFFF; --ink:#141D33; --ink-soft:#4A566F; --rule:#CBD3DE;
+  --f-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --wrap:1680px; --gut:24px; --r-lg:28px; --r-md:20px;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--f-body)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut);container-type:inline-size}
+.sec{padding-block:96px}
+.white{background:var(--card)}
+.grey{background:var(--paper)}
+.navy{background:var(--navy);color:var(--on-night)}
+.night{background:var(--night);color:var(--on-night)}
+.lazy{content-visibility:auto;contain-intrinsic-size:auto 900px}
+
+/* type */
+.eyebrow{font:500 13px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase}
+h2{font:800 clamp(36px,3.7cqi,72px)/1 var(--f-display);text-transform:uppercase;letter-spacing:.005em;text-wrap:pretty}
+h3{font:700 22px/1.2 var(--f-body);letter-spacing:-.01em}
+.answer{font-size:18px;line-height:1.65;color:var(--ink-soft)}
+.night .answer,.navy .answer{color:var(--on-night-soft)}
+
+/* split section head */
+.head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:end;margin-bottom:48px}
+.head h2 em{font-style:normal;color:var(--navy);background:linear-gradient(to top,var(--yellow) 0 30%,transparent 30%)}
+.night .head h2 em{color:var(--yellow);background:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap;border:2px solid transparent;transition:background-color .15s ease,color .15s ease,border-color .15s ease,transform .12s ease-out}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.sm{min-height:44px;padding:0 20px;font-size:15px}
+.btn.pri{background:var(--yellow);color:var(--night)}
+.btn.ghost-l{border-color:#4A5576;color:var(--on-night)}
+.btn.navy{background:var(--navy);color:#FFFFFF}
+.btn.ghost-d{border-color:var(--navy);color:var(--navy)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- header ---------- */
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--night);color:var(--on-night);border-bottom:1px solid var(--night-line)}
+.hd .wrap{display:flex;align-items:center;gap:20px;min-height:84px}
+.hd .logo{flex:none;background:#FFFFFF;border-radius:18px;padding:5px 11px;display:block}
+.hd .logo img{height:58px;width:auto}
+.hd nav{flex:1;min-width:0}
+.hd nav ul{display:flex;gap:2px;justify-content:center;flex-wrap:wrap}
+.hd nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:500;color:var(--on-night-soft);transition:background-color .15s ease,color .15s ease}
+.hd .tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;white-space:nowrap;text-decoration:none}
+.hd .tel svg{width:18px;height:18px}
+.hd .menu{display:none;min-width:44px;min-height:44px;border-radius:999px;border:0;background:var(--night-line);color:var(--on-night);font:600 14px var(--f-body);padding:0 16px;cursor:pointer}
+
+/* ---------- hero (Sample A) ---------- */
+.hero .grid{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);min-height:640px;position:relative}
+.hero .panel{padding:56px max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut))) 52px;padding-right:56px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero .eyebrow{color:var(--yellow)}
+.hero h1{font:800 clamp(46px,4.8vw,72px)/.95 var(--f-display);text-transform:uppercase;letter-spacing:.005em}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero .lede{font-size:19px;color:var(--on-night-soft);max-width:46ch}
+.hero .proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;border-top:1px solid var(--night-line);padding-top:20px}
+.hero .proof div{display:flex;flex-direction:column;gap:2px}
+.hero .proof strong{font:700 30px/1 var(--f-display)}
+.hero .proof span{font-size:13px;color:var(--steel)}
+.hero .photo{position:relative;min-height:100%;border-bottom-left-radius:var(--r-lg);overflow:hidden}
+.hero .photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;background:var(--night)}
+.hero .tag{position:absolute;right:24px;bottom:24px;background:var(--night);color:var(--on-night);border-radius:999px;padding:10px 18px;font:500 13px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.seam{position:absolute;top:0;bottom:0;left:46%;width:12px;margin-left:-6px;z-index:2;pointer-events:none}
+.bead{position:absolute;inset:0;border-radius:6px;background:radial-gradient(ellipse 80% 70% at 50% 15%,#D7DCE6 0 30%,#8F99AE 46%,#4B556B 72%,#2A3245 100%);background-size:100% 8px;transform-origin:50% 0;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.runner{position:absolute;inset:0;opacity:0}
+.runner::before{content:"";position:absolute;left:1px;right:1px;bottom:8px;height:180px;border-radius:6px;background:linear-gradient(to bottom,rgba(255,160,60,0) 0%,rgba(255,150,40,.55) 55%,#FFD27A 85%,#FFFFFF 100%)}
+.runner::after{content:"";position:absolute;left:50%;bottom:0;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 12px 4px #CFE4FF,0 0 40px 14px rgba(120,180,255,.55),0 0 90px 30px rgba(120,180,255,.22)}
+@keyframes lay{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes run{0%{transform:translateY(-100%);opacity:1}92%{opacity:1}100%{transform:translateY(0);opacity:0}}
+.hero.play .bead{animation:lay 2.2s cubic-bezier(.45,.05,.55,.95)}
+.hero.play .runner{animation:run 2.2s cubic-bezier(.45,.05,.55,.95)}
+
+/* ---------- trust strip ---------- */
+.trust{padding-block:28px;background:var(--card);border-bottom:1px solid var(--rule)}
+.trust li{background:var(--paper) !important;border-color:var(--paper-2) !important}
+.trust ul{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.trust li{display:flex;align-items:center;justify-content:center;text-align:center;gap:8px;min-height:52px;padding:6px 14px;line-height:1.25;border-radius:999px;background:var(--card);border:1px solid var(--rule);font-weight:600;font-size:15px}
+.trust svg{width:18px;height:18px;color:var(--navy);flex:none}
+
+/* ---------- services ---------- */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc li,.tips > a{display:flex}
+.svc a{flex:1;display:flex;flex-direction:column;background:var(--card);border-radius:var(--r-md);overflow:hidden;text-decoration:none;border:1px solid var(--rule);transition:border-color .15s ease}
+.svc .ph{aspect-ratio:16/10;overflow:hidden;background:var(--paper-2)}
+.svc .ph img{width:100%;height:100%;object-fit:cover}
+.svc .tx{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.svc p{color:var(--ink-soft);font-size:16px;line-height:1.55;flex:1}
+.svc .go{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--navy)}
+
+/* ---------- process ---------- */
+.proc{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:stretch}
+.steps{display:flex;flex-direction:column;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start;background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md);padding:22px 24px}
+.steps li::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--night);color:var(--yellow);font:800 26px/1 var(--f-display)}
+.steps p{color:var(--ink-soft);font-size:16px;margin-top:6px}
+.proc .ph{border-radius:var(--r-lg);overflow:hidden;position:relative;min-height:420px}
+.proc .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proc .ph span{position:absolute;left:20px;bottom:20px;background:var(--night);color:var(--on-night);border-radius:999px;padding:10px 18px;font:500 13px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+
+/* ---------- who we work for ---------- */
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.who article{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column}
+.who .ph{aspect-ratio:4/3;overflow:hidden}
+.who .ph img{width:100%;height:100%;object-fit:cover}
+.who .tx{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px}
+.who p{color:var(--ink-soft);font-size:16px}
+
+/* section-colour card treatments */
+.white .who article,.white .tips a,.white .faq details{background:var(--paper);border-color:var(--paper-2)}
+.white .faq summary::after{background:var(--card)}
+.night .steps li{background:var(--night-2);border-color:var(--night-line)}
+.night .steps h3{color:var(--on-night)}
+.night .steps p{color:var(--on-night-soft)}
+.night .steps li::before{background:var(--yellow);color:var(--night)}
+.night .head h2 em{color:var(--yellow);background:none}
+.navy .head h2 em{color:var(--yellow);background:none}
+.navy .reasons li{background:#21346A;border-color:#2E4580}
+
+/* ---------- why ---------- */
+.why .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:stretch}
+.why .ph{border-radius:var(--r-lg);overflow:hidden;position:relative;min-height:520px}
+.why .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.why .col{display:flex;flex-direction:column;gap:28px;justify-content:center}
+.why .col h2 em{font-style:normal;color:var(--yellow)}
+.reasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.reasons li{background:var(--night-2);border:1px solid var(--night-line);border-radius:var(--r-md);padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.reasons h3{font-size:19px;color:var(--on-night)}
+.reasons p{color:var(--on-night-soft);font-size:15.5px;line-height:1.55}
+
+/* ---------- reviews ---------- */
+.revs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.revs figure{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md);padding:26px 24px;display:flex;flex-direction:column;gap:18px}
+.revs blockquote{margin:0;font-size:16px;line-height:1.6;color:var(--ink);flex:1}
+.revs blockquote::before{content:"\201C";display:block;font:800 56px/.6 var(--f-display);color:var(--navy);margin-bottom:10px}
+.revs figcaption{font:500 12.5px/1.5 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);border-top:1px solid var(--rule);padding-top:14px}
+.revs figcaption b{display:block;color:var(--ink);font-weight:500}
+.more{margin-top:28px;display:flex;justify-content:center}
+
+/* ---------- tips ---------- */
+.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tips a{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md);overflow:hidden;transition:border-color .15s ease}
+.tips .ph{aspect-ratio:16/10;overflow:hidden}
+.tips .ph img{width:100%;height:100%;object-fit:cover}
+.tips .tx{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tips .tx .eyebrow{color:var(--ink-soft);font-size:12px}
+.tips p{color:var(--ink-soft);font-size:15.5px;flex:1}
+.tips .go{font-weight:600;font-size:15px;color:var(--navy)}
+
+/* ---------- service areas ---------- */
+.areas{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:24px;align-items:stretch}
+.areas .col{display:flex;flex-direction:column;gap:16px}
+.area-cta{flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px;background:var(--card);border:1px solid var(--rule);border-radius:var(--r-lg);padding:26px 28px}
+.area-cta .t{font:700 22px/1.25 var(--f-body);letter-spacing:-.01em}
+.area-cta p{color:var(--ink-soft);font-size:16px}
+.areas .answer{max-width:none}
+.city-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.city-links a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:0 18px;border-radius:999px;background:var(--card);border:1px solid var(--rule);text-decoration:none;font-weight:600;font-size:15px;transition:background-color .15s ease,border-color .15s ease}
+.city-links a.hub{background:var(--night);color:var(--yellow);border-color:var(--night)}
+.map{--card:#0B1226;background:var(--card);color:#FFFFFF;border-radius:var(--r-lg);padding:26px 28px 22px;display:flex;flex-direction:column;justify-content:center}
+.map h3{font:500 13px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);margin:0 0 10px}
+.map svg{width:100%;height:auto;display:block;overflow:visible}
+.map .lake{fill:#1B2A52}
+.map .lake-t{fill:#909FC4;font:italic 400 10px var(--f-body)}
+.map .spoke{fill:none;stroke:var(--yellow);stroke-width:1.6;stroke-linecap:round}
+.map .city{fill:#FFFFFF}
+.map .hub{fill:var(--yellow)}
+/* map motion: routes draw out from New Orleans, then rigs roll the routes */
+.map .ring{fill:none;stroke:var(--yellow);stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center}
+.map.live .ring{animation:ring 2.4s cubic-bezier(.22,1,.36,1) infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(4.5);opacity:0}}
+.map .spoke.draw{stroke-dasharray:var(--len);animation:draw .8s cubic-bezier(.22,1,.36,1)}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.map .city.pop{transform-box:fill-box;transform-origin:center;animation:pop .9s cubic-bezier(.22,1,.36,1)}
+@keyframes pop{0%,55%{transform:scale(.3);opacity:0}100%{transform:scale(1);opacity:1}}
+.map .rig{fill:#FFFFFF}
+.map .rig-glow{fill:var(--yellow);opacity:.35}
+.map:not(.live) .rigs{display:none}
+@media (prefers-reduced-motion:reduce){.map.live .ring,.map .spoke.draw,.map .city.pop{animation:none}.map .rigs{display:none}}
+.map text{paint-order:stroke;stroke:var(--card);stroke-width:3.5px;stroke-linejoin:round}
+.map text.n{fill:#E6EAF4;font:600 11px var(--f-body)}
+.map text.h{fill:var(--yellow);font:700 12.5px var(--f-body)}
+.map .note{font-size:12px;color:#9AA6C6;margin-top:8px}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;align-items:stretch}
+.faq .qs{display:flex;flex-direction:column;gap:12px}
+.faq .ph{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:420px}
+.faq .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.faq details{background:var(--card);border:1px solid var(--rule);border-radius:var(--r-md)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 22px;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--paper-2);font:600 20px/1 var(--f-body);color:var(--navy)}
+.faq details[open] summary::after{content:"\2212";background:var(--yellow)}
+.faq summary h3{font:inherit;letter-spacing:0}
+.faq .ans{padding:0 22px 20px;color:var(--ink-soft);font-size:16px}
+
+/* ---------- closing ---------- */
+.closing{position:relative;padding-block:110px;background:var(--night)}
+.closing > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.closing .card{position:relative;max-width:600px;background:var(--night);color:var(--on-night);border-radius:var(--r-lg);padding:44px 48px;display:flex;flex-direction:column;gap:20px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.closing h2{font-size:52px}
+.closing h2 em{font-style:normal;color:var(--yellow)}
+.closing p{color:var(--on-night-soft);font-size:18px}
+.closing .num{font:700 15px/1.4 var(--f-mono);letter-spacing:.06em;color:var(--on-night)}
+
+/* ---------- footer ---------- */
+.ft{background:var(--night);color:var(--on-night-soft);padding-block:64px 32px;border-top:1px solid var(--night-line)}
+.ft .grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:40px}
+.ft .logo{display:inline-block;align-self:flex-start;background:#FFFFFF;border-radius:18px;padding:6px 12px}
+.ft .logo img{height:64px;width:auto}
+.ft .about{display:flex;flex-direction:column;gap:18px}
+.ft .fh{font:500 13px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);margin-bottom:14px}
+.ft li a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;text-decoration:none;font-size:15px;color:var(--on-night-soft);transition:color .15s ease}
+.ft .hours{font-size:15px;color:var(--on-night-soft)}
+.ft .tel{display:inline-flex;align-items:center;min-height:44px;font:700 22px/1.2 var(--f-body);color:var(--on-night);text-decoration:none;align-self:flex-start}
+.social{display:flex;gap:10px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--night-line);color:var(--on-night);text-decoration:none;font:600 13px var(--f-body);transition:background-color .15s ease,color .15s ease}
+.social svg{width:18px;height:18px}
+.ft .base{margin-top:48px;padding-top:24px;border-top:1px solid var(--night-line);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;font-size:14px}
+.ft .base ul{display:flex;flex-wrap:wrap;gap:6px 20px}
+.ft .base a{text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+
+@media (hover:hover) and (pointer:fine){
+  .hd nav a:hover{background:var(--night-line);color:var(--on-night)}
+  .btn.pri:hover{background:var(--yellow-hi)}
+  .btn.ghost-l:hover{border-color:var(--yellow)}
+  .btn.navy:hover{background:#24397A}
+  .btn.ghost-d:hover{background:var(--card)}
+  .svc a:hover,.tips a:hover{border-color:var(--navy)}
+  .city-links a:not(.hub):hover{background:var(--yellow);border-color:var(--yellow)}
+  .ft li a:hover{color:var(--yellow)}
+  .social a:hover{background:var(--yellow);color:var(--night)}
+}
+
+/* ---------- page motion ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@keyframes settle{from{transform:scale(1.08)}}
+@keyframes slide-x{from{transform:translateY(-50%) rotate(180deg) translateX(-110%)}}
+@keyframes pop-in{from{opacity:0;transform:scale(.95)}}
+@keyframes fade{from{opacity:0}}
+@keyframes h1-in{from{transform:translateY(18px)}}
+.rv-go{animation:rise .7s var(--ease-out) var(--d,0ms) backwards}
+.rv-go .ph img,.rv-go.ph img{animation:settle 1.2s var(--ease-out) var(--d,0ms) backwards}
+.hero .rv-hero{animation:rise .6s var(--ease-out) var(--d,0ms) backwards}
+.hero h1.rv-hero{animation-name:h1-in}
+.faq details[open] .ans{animation:rise .35s var(--ease-out)}
+.svc .ph img,.tips .ph img,.who .ph img{transition:transform .5s var(--ease-out)}
+.svc .go,.tips .go,.city-links a span{display:inline-block;transition:transform .2s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+  .svc a:hover .ph img,.tips a:hover .ph img,.who article:hover .ph img{transform:scale(1.04)}
+  .svc a:hover .go,.tips a:hover .go,.city-links a:hover span{transform:translateX(4px)}
+}
+
+/* ---------- free estimate side tab + popup ---------- */
+.side-tab{position:fixed;right:0;top:50%;z-index:30;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);background:var(--night);color:#FFFFFF;border:0;padding:22px 13px;min-width:44px;border-radius:0 14px 14px 0;font:700 14px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background-color .15s ease,color .15s ease}
+.side-tab.in{animation:slide-x .5s var(--ease-out) .8s backwards}
+.side-tab b{color:var(--yellow);font-weight:800}
+.est{border:0;padding:0;border-radius:var(--r-lg);width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 32px);background:var(--card);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.est[open]{animation:pop-in .25s var(--ease-out)}
+.est::backdrop{background:rgba(11,18,38,.72)}
+.est[open]::backdrop{animation:fade .25s ease-out}
+.est .top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:26px 28px 6px}
+.est h2{font:800 34px/1 var(--f-display);text-transform:uppercase}
+.est .sub{color:var(--ink-soft);font-size:15.5px;padding:0 28px 14px}
+.est .x{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);font:600 22px/1 var(--f-body);cursor:pointer}
+.est .frame{position:relative;margin:0 20px;border-radius:var(--r-md);background:var(--paper);height:min(620px,calc(100vh - 260px));overflow:hidden}
+.est .frame iframe{position:relative;z-index:1;width:100%;height:100%;border:0;display:block}
+.est .fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:var(--ink-soft);font-size:15px}
+.est .fallback a{color:var(--navy);font-weight:600}
+.est .call{padding:16px 28px 24px;font-size:15px;color:var(--ink-soft)}
+.est .call a{color:var(--navy);font-weight:700;text-decoration:none}
+@media (hover:hover) and (pointer:fine){.side-tab:hover{background:var(--yellow);color:var(--night)}.side-tab:hover b{color:var(--night)}}
+.side-tab:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media (max-width:600px){.side-tab{padding:18px 13px;font-size:12px}.est .top{padding:20px 20px 4px}.est .sub,.est .call{padding-inline:20px}.est .frame{margin:0 12px}}
+@media (prefers-reduced-motion:reduce){
+  .rv-go,.rv-go .ph img,.rv-go.ph img,.hero .rv-hero,.faq details[open] .ans,.side-tab.in,.est[open],.est[open]::backdrop{animation:none}
+  .svc .ph img,.tips .ph img,.who .ph img,.svc .go,.tips .go,.city-links a span{transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  .hd nav{display:none}
+  .hd .menu{display:inline-flex;align-items:center}
+  .hd .tel{margin-left:auto}
+  .hd.open nav{display:block;position:absolute;left:12px;right:12px;top:100%;margin-top:8px;background:#FFFFFF;border-radius:20px;padding:10px;box-shadow:0 16px 40px rgba(0,0,0,.3)}
+  .hd.open nav ul{flex-direction:column;align-items:stretch}
+  .hd.open nav a{color:var(--navy);width:100%}
+  .hero .proof{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .revs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ft .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  :root{--gut:16px}
+  .sec{padding-block:64px}
+  .head{grid-template-columns:1fr;gap:16px;margin-bottom:32px}
+  .hd .wrap{min-height:68px;gap:10px}
+  .hd .logo img{height:46px}
+  .hd .tel span{display:none}
+  .hd .tel{width:44px;justify-content:center;border-radius:999px;border:2px solid currentColor}
+  .hd .btn.sm{display:none}
+  .hero .grid{grid-template-columns:1fr;min-height:0}
+  .hero .photo{order:-1;height:220px;min-height:0;border-radius:0}
+  .hero .panel{padding:32px var(--gut) 36px;gap:20px}
+  .hero h1{font-size:40px}
+  .hero .lede{font-size:17px}
+  .seam{left:0;right:0;top:220px;bottom:auto;width:auto;height:10px;margin:-5px 0 0}
+  .bead{background-size:8px 100%;background-image:radial-gradient(ellipse 70% 80% at 15% 50%,#D7DCE6 0 30%,#8F99AE 46%,#4B556B 72%,#2A3245 100%)}
+  .hero.play .bead,.hero.play .runner{animation:none}
+  .svc,.who,.tips{grid-template-columns:1fr 1fr}
+  .proc,.why .grid,.areas{grid-template-columns:1fr}
+  .proc .ph{min-height:260px;order:-1}
+  .why .ph{min-height:280px}
+  .faq{grid-template-columns:1fr}
+  .faq .ph{order:-1;min-height:240px}
+  .closing{padding-block:56px}
+  .closing .card{padding:28px 24px}
+  .map{padding:18px 12px 14px}
+  .map text.n{font-size:14.5px}
+  .map text.h{font-size:16px}
+  .map .lake-t{font-size:12px}
+  .map h3,.map .note{padding:0 8px}
+}
+@media (max-width:600px){
+  h2,.closing h2{font-size:40px}
+  #faq h2{font-size:38px}
+  .svc,.who,.tips,.revs,.reasons,.ft .grid{grid-template-columns:1fr}
+  .city-links{grid-template-columns:1fr 1fr}
+  .trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ctas{flex-direction:column}
+  .ctas .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero.play .bead,.hero.play .runner{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hd" id="top">
+  <div class="wrap">
+    <a class="logo" href="https://www.bigeasymobilewelders.com/"><img src="home/img/logo-240.png" width="240" height="202" alt="Big Easy Mobile Welders logo"></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="https://www.bigeasymobilewelders.com/">Home</a></li><li><a href="https://www.bigeasymobilewelders.com/about/">About</a></li><li><a href="https://www.bigeasymobilewelders.com/services/">Services</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/">Service Areas</a></li><li><a href="https://www.bigeasymobilewelders.com/testimonials/">Testimonials</a></li><li><a href="https://www.bigeasymobilewelders.com/blog/">Blog</a></li><li><a href="https://www.bigeasymobilewelders.com/contact/">Contact</a></li>
+    </ul></nav>
+    <a class="tel" href="tel:+15043702757" aria-label="Call (504) 370-2757"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>(504) 370-2757</span></a>
+    <a class="btn sm pri" href="https://www.bigeasymobilewelders.com/contact/" data-estimate>Free Estimates</a>
+    <button class="menu" type="button" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main>
+<!-- 1. HERO -->
+<section class="hero night" aria-label="Introduction">
+  <div class="grid">
+    <div class="panel">
+      <p class="eyebrow">Mobile welding · New Orleans and surrounding parishes</p>
+      <h1>Expert Mobile Welding in <em>New Orleans</em>, Right at Your Doorstep</h1>
+      <p class="lede">Our licensed and insured welders bring a fully equipped rig to your fence, gate, railing, pipe or trailer. No hauling heavy metal to a shop.</p>
+      <div class="ctas">
+        <a class="btn pri" href="https://www.bigeasymobilewelders.com/contact/">Get a Free Estimate</a>
+        <a class="btn ghost-l" href="tel:+15043702757"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call (504) 370-2757</a>
+      </div>
+      <div class="proof">
+        <div><strong>20+ yrs</strong><span>Welding experience</span></div>
+        <div><strong>Licensed</strong><span>And insured</span></div>
+        <div><strong>$0</strong><span>Free estimates</span></div>
+        <div><strong>12</strong><span>Cities served</span></div>
+      </div>
+    </div>
+    <div class="photo">
+      <video class="hv" autoplay muted loop playsinline preload="auto" poster="home/video/hero-poster.webp" width="1920" height="1200" aria-label="Slow-motion montage of welders at work: a silhouette on a steel frame, MIG sparks, a gate post, a pipe flange, a workshop arc and close-up sparks">
+        <source src="home/video/hero-m.mp4" type="video/mp4" media="(max-width:900px)">
+        <source src="home/video/hero.mp4" type="video/mp4">
+      </video>
+      <span class="tag">We come to the job</span>
+    </div>
+    <div class="seam" aria-hidden="true"><div class="bead"></div><div class="runner"></div></div>
+  </div>
+</section>
+
+<!-- 2. TRUST STRIP -->
+<section class="trust" aria-label="Why customers trust us">
+  <div class="wrap"><ul>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Licensed and Insured</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>20+ Years of Experience</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Free Estimates</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>No Hidden Fees</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>Satisfaction Guaranteed</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 20v-2a4 4 0 0 0-3-3.9"/></svg>Rated by Hundreds</li>
+  </ul></div>
+</section>
+
+<!-- 3. SERVICES -->
+<section class="sec grey" id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>What Mobile Welding Services Do We Offer in <em>New Orleans</em>?</h2>
+      <p class="answer">We offer on-site pipe, fence, gate, iron railing, window and specialized mobile welding, plus arc welding, custom welding and metal fabrication. Our licensed and insured welders bring the equipment to homes and businesses across New Orleans, so heavy metal never has to be hauled to a shop.</p>
+    </div>
+    <ul class="svc">
+      <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/pipe-welding/"><div class="ph"><img src="home/img/svc-pipe.webp" width="880" height="587" loading="lazy" alt="Welder in a helmet running a bead along a large steel pipeline section"></div><div class="tx"><h3>Pipe Welding</h3><p>Pipe and pipeline repair on site, with stick and gas-shielded processes matched to the pipe.</p><span class="go">View pipe welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/fence/"><div class="ph"><img src="home/img/svc-fence.webp" width="880" height="588" loading="lazy" alt="Sparks flying as a welder joins a decorative lattice metal fence panel"></div><div class="tx"><h3>Fence Welding</h3><p>Fence repairs and custom fence fabrication, with the material and process chosen for your fence.</p><span class="go">View fence welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/gate-welding/"><div class="ph"><img src="home/img/svc-gate.webp" width="880" height="639" loading="lazy" alt="Welder in a helmet welding a wrought iron gate outside a house"></div><div class="tx"><h3>Gate Welding</h3><p>Gate repairs and custom gates in steel or aluminum, with materials and tools covered in your estimate.</p><span class="go">View gate welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/iron-railing-welding/"><div class="ph"><img src="home/img/svc-railing.webp" width="880" height="588" loading="lazy" alt="Welder in a helmet welding a wrought iron stair railing at a front entrance"></div><div class="tx"><h3>Iron Railing Welding</h3><p>Custom indoor and outdoor railings for stairways, decks and balconies, built to fit your property.</p><span class="go">View railing welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/specialized-mobile-welding/"><div class="ph"><img src="home/img/svc-specialized.webp" width="880" height="550" loading="lazy" alt="Mobile welder in a helmet welding a steel trailer frame on site"></div><div class="tx"><h3>Specialized Mobile Welding</h3><p>Repair work at your home or office and custom metal pieces, whatever the size of the project.</p><span class="go">View specialized welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/window-welding/"><div class="ph"><img src="home/img/svc-window.webp" width="880" height="587" loading="lazy" alt="Welder in a helmet working at a bench beside a window in a brick building"></div><div class="tx"><h3>Window Welding</h3><p>Repairs for rusted and worn metal window frames, carried out at your home.</p><span class="go">View window welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/arc-welding/"><div class="ph"><img src="home/img/svc-arc.webp" width="880" height="587" loading="lazy" alt="Gloved hands holding an electrode holder as a blue welding arc joins two pipe sections"></div><div class="tx"><h3>Arc Welding</h3><p>Shielded and non-shielded arc welding for commercial and residential customers.</p><span class="go">View arc welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/custom-welding/"><div class="ph"><img src="home/img/svc-custom.webp" width="880" height="587" loading="lazy" alt="Gloved hands MIG welding the corner of a custom steel frame"></div><div class="tx"><h3>Custom Welding</h3><p>Custom ironwork, estimated before we start so we arrive with the right equipment for the job.</p><span class="go">View custom welding →</span></div></a></li>
+      <li><a href="https://www.bigeasymobilewelders.com/metal-fabrication/"><div class="ph"><img src="home/img/svc-fab.webp" width="880" height="667" loading="lazy" alt="Gloved hand welding a steel frame laid across sawhorses on a lawn"></div><div class="tx"><h3>Metal Fabrication</h3><p>Fabrication of all types of metal for residential, commercial and industrial settings.</p><span class="go">View metal fabrication →</span></div></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. PROCESS -->
+<section class="sec night lazy" id="process">
+  <div class="wrap">
+    <div class="head">
+      <h2>How Does Our Mobile Welding Service Work in <em>New Orleans</em>?</h2>
+      <p class="answer">It takes five steps. You request a free quote, we schedule a time that suits you, our welders arrive with every tool and do the work on site, we walk you through the finished job, and we stay one call away for any follow-up adjustments.</p>
+    </div>
+    <div class="proc">
+      <ol class="steps">
+        <li><div><h3>Request a Free Quote</h3><p>Reach us through our website, by phone or by email, and tell us about the repair or custom fabrication. You get a free, no-obligation quote tailored to the project.</p></div></li>
+        <li><div><h3>Schedule Your Service</h3><p>Once you approve the quote, we book a time that is convenient for you. Appointments are flexible.</p></div></li>
+        <li><div><h3>On-Site Welding</h3><p>Our licensed and insured welders come to your location with all the tools and equipment, so nothing heavy has to be moved.</p></div></li>
+        <li><div><h3>Review and Complete</h3><p>We walk you through the finished work to make sure it meets your expectations, then finalize with easy payment options.</p></div></li>
+        <li><div><h3>Follow-Up Support</h3><p>We stand by our work. If you need an adjustment or more help, our team is a call away.</p></div></li>
+      </ol>
+      <div class="ph"><img src="home/img/process-rig.webp" width="1000" height="666" loading="lazy" alt="Yellow wheeled welding machine with wire feeder and hoses, ready to roll to a job"><span>The rig comes to you</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHO WE WORK FOR -->
+<section class="sec white lazy" id="who">
+  <div class="wrap">
+    <div class="head">
+      <h2>Who Do Our Mobile Welders Work for in <em>New Orleans</em>?</h2>
+      <p class="answer">We weld for homeowners, businesses and industrial sites. Our team handles residential and commercial projects, and our fabricators work with all types of metal in industrial settings too. No job is too big or too small, from a single gate hinge to a full custom fabrication.</p>
+    </div>
+    <div class="who">
+      <article><div class="ph"><img src="home/img/set-res.webp" width="880" height="880" loading="lazy" alt="Welder in a helmet repairing a residential metal fence with sparks flying"></div><div class="tx"><h3>Homes</h3><p>Fences, gates, iron railings and window frames repaired or built right where they stand.</p></div></article>
+      <article><div class="ph"><img src="home/img/set-com.webp" width="880" height="587" loading="lazy" alt="Welder kneeling to weld floor steel inside a building under construction"></div><div class="tx"><h3>Businesses</h3><p>Repairs and fabrication for commercial properties, done on site so downtime stays low.</p></div></article>
+      <article><div class="ph"><img src="home/img/set-ind.webp" width="880" height="550" loading="lazy" alt="Welder in a red jacket stick-welding a large steel pipe at an outdoor work site"></div><div class="tx"><h3>Industrial Sites</h3><p>Pipe welding, pipeline repair and metal fabrication for industrial settings.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. WHY CHOOSE US -->
+<section class="sec navy why lazy" id="why">
+  <div class="wrap grid">
+    <div class="ph"><img src="home/img/why.webp" width="1200" height="801" loading="lazy" alt="Welder in a helmet stick-welding a metal frame in a doorway, arc light glowing"></div>
+    <div class="col">
+      <h2>Why Do New Orleans Property Owners Choose <em>Our Mobile Welders</em>?</h2>
+      <p class="answer">Our welders bring over 20 years of experience, carry licenses and insurance, and arrive in fully equipped mobile units. Estimates are free, pricing is transparent with no hidden fees, and we stand behind every job with follow-up support across New Orleans and nearby parishes.</p>
+      <ul class="reasons">
+        <li><h3>Expertise You Can Count On</h3><p>Our licensed, insured and highly trained welders handle simple repairs and complex custom fabrications, and aim to get it right the first time.</p></li>
+        <li><h3>Convenience at Your Doorstep</h3><p>Our fully equipped mobile welding units tackle the project on site, for minimal downtime and maximum convenience.</p></li>
+        <li><h3>Competitive Pricing, No Hidden Fees</h3><p>We offer free estimates on all our services, so you always know what to expect, with no surprise costs.</p></li>
+        <li><h3>Serving New Orleans and Beyond</h3><p>We serve New Orleans and nearby areas like Covington, Mandeville and Metairie, wherever the job is.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 8. REVIEWS -->
+<section class="sec grey lazy" id="reviews">
+  <div class="wrap">
+    <div class="head">
+      <h2>What Do <em>New Orleans</em> Customers Say About Our Mobile Welding Service?</h2>
+      <p class="answer">Customers mention fast turnarounds, solid workmanship and fair prices. Homeowners who needed railings and gates welded say the work was quick and top notch, and others call us reliable, professional and affordable for jobs at their homes, businesses and vehicles.</p>
+    </div>
+    <div class="revs">
+      <figure><blockquote>Big Easy Mobile Welders provide quality welding work at a reasonable price. They have been reliable and quick to respond whenever I've needed them.</blockquote><figcaption><b>Karen Wightman</b>Customer</figcaption></figure>
+      <figure><blockquote>They came to my house and welded two iron railings with a quick turnaround time, which was just what I needed. The quality of workmanship is top notch.</blockquote><figcaption><b>Margaret Taylor</b>Iron railings</figcaption></figure>
+      <figure><blockquote>They helped me out of a jam by welding our gate, and their work is amazing. The fast service combined with great quality made all the difference.</blockquote><figcaption><b>Russell Burton</b>Gate welding</figcaption></figure>
+      <figure><blockquote>They are not only professional and skilled, but also very affordable! I highly recommend them for any welding job on your property or vehicle.</blockquote><figcaption><b>Mary Goodwin</b>Customer</figcaption></figure>
+    </div>
+    <div class="more"><a class="btn ghost-d" href="https://www.bigeasymobilewelders.com/testimonials/">Read More Reviews</a></div>
+  </div>
+</section>
+
+<!-- 9. TIPS -->
+<section class="sec white lazy" id="tips">
+  <div class="wrap">
+    <div class="head">
+      <h2>What Welding Advice Do We Share for <em>New Orleans</em> Properties?</h2>
+      <p class="answer">Our blog answers the questions we hear on job sites around New Orleans: how humidity and salt air rust welded steel, what dockside welding involves, and when aluminum or steel suits a project better. Start with these three guides, or browse the full blog.</p>
+    </div>
+    <div class="tips">
+      <a href="https://www.bigeasymobilewelders.com/protecting-welded-metal-from-rust-and-corrosion-in-new-orleans-la/"><div class="ph"><img src="home/img/blog-rust.webp" width="880" height="587" loading="lazy" alt="Orange rust and corrosion spreading across a weathered metal surface"></div><div class="tx"><span class="eyebrow">Rust and corrosion</span><h3>Protecting Welded Metal From Rust and Corrosion</h3><p>Why humidity and salt air push unprotected welded steel toward rust, and what slows it down.</p><span class="go">Read the guide →</span></div></a>
+      <a href="https://www.bigeasymobilewelders.com/marine-and-dockside-welding-keeps-waterfront-structures-strong-in-new-orleans-la/"><div class="ph"><img src="home/img/blog-marine.webp" width="880" height="586" loading="lazy" alt="Aluminum boat moored at a wooden dock on calm water"></div><div class="tx"><span class="eyebrow">Marine welding</span><h3>Marine and Dockside Welding for Waterfront Structures</h3><p>How welding keeps docks, seawalls, pilings and boat lifts sound in a splash zone.</p><span class="go">Read the guide →</span></div></a>
+      <a href="https://www.bigeasymobilewelders.com/aluminum-vs-steel-welding-which-is-right-for-your-project-in-new-orleans-la/"><div class="ph"><img src="home/img/blog-alum.webp" width="880" height="587" loading="lazy" alt="Gloved hand stick-welding a steel bar on the ground with sparks flying"></div><div class="tx"><span class="eyebrow">Materials</span><h3>Aluminum vs. Steel Welding for Your Project</h3><p>How the two metals weld differently, and which jobs each one suits.</p><span class="go">Read the guide →</span></div></a>
+    </div>
+    <div class="more"><a class="btn ghost-d" href="https://www.bigeasymobilewelders.com/blog/">Browse the Blog</a></div>
+  </div>
+</section>
+
+<!-- 10. SERVICE AREAS -->
+<section class="sec grey lazy" id="areas">
+  <div class="wrap">
+    <div class="head">
+      <h2>Where Do Our Mobile Welders Work Around <em>New Orleans</em>?</h2>
+      <p class="answer">We serve New Orleans and 11 nearby cities: Metairie, Kenner, Gretna, St. Rose, LaPlace, Slidell, Mandeville, Covington, Madisonville, Hammond and Baton Rouge. Our mobile units drive to your property in any of them, so you get the same on-site welding service wherever the job is.</p>
+    </div>
+    <div class="areas">
+    <div class="col">
+      <ul class="city-links">
+        <li><a class="hub" href="https://www.bigeasymobilewelders.com/service-areas/">New Orleans <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/metairie/">Metairie <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/kenner/">Kenner <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/gretna/">Gretna <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/st-rose/">St. Rose <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/laplace/">LaPlace <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/slidell/">Slidell <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/mandeville/">Mandeville <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/covington/">Covington <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/madisonville/">Madisonville <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/hammond/">Hammond <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/baton-rouge/">Baton Rouge <span aria-hidden="true">→</span></a></li>
+      </ul>
+      <div class="area-cta">
+        <p class="t">Not sure we cover your street?</p>
+        <p>Request a free estimate or call us, and we will confirm before we book the job.</p>
+        <div class="ctas">
+          <a class="btn navy" href="https://www.bigeasymobilewelders.com/contact/">Get a Free Estimate</a>
+          <a class="btn ghost-d" href="tel:+15043702757">Call (504) 370-2757</a>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <h3>Where our rigs roll</h3>
+      <svg class="route" viewBox="0 0 360 210" role="img" aria-label="Schematic map of our service area, from New Orleans out to 11 cities">
+        <ellipse class="lake" cx="240" cy="92" rx="78" ry="30"/>
+        <text class="lake-t" x="240" y="92" text-anchor="middle">Lake Pontchartrain</text>
+        <g class="spokes"></g>
+        <circle class="hub" cx="236" cy="150" r="6"/>
+        <text class="h" x="246" y="154">New Orleans</text>
+        <g class="cities"></g>
+      </svg>
+      <p class="note">Schematic, not to scale. 11 service areas from our site.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="sec white lazy" id="faq">
+  <div class="wrap">
+    <div class="head">
+      <h2>Your Questions About Mobile Welding in <em>New Orleans</em>, Answered</h2>
+      <p class="answer">Straight answers to what New Orleans homeowners and businesses ask us most before they book a mobile welder.</p>
+    </div>
+    <div class="faq">
+      <div class="qs">
+        <details><summary><h3>Do mobile welders come to your house?</h3></summary><p class="ans">Yes. Our mobile welders bring a fully equipped unit to your home or business anywhere in our New Orleans service area. Gates, fences, railings, pipes and frames get welded where they stand, so there is no hauling heavy material to a shop.</p></details>
+        <details><summary><h3>Are your welders licensed and insured?</h3></summary><p class="ans">Yes. Our team of welders is licensed, insured and highly trained. We handle everything from simple repairs to complex custom fabrications, and we bring the same standard to every job, large or small.</p></details>
+        <details><summary><h3>How much does a mobile welder cost?</h3></summary><p class="ans">It depends on the job, so we start with a free, no-obligation estimate tailored to your project. Our pricing is transparent with no hidden fees, which means you know what to expect before any work begins.</p></details>
+        <details><summary><h3>What can a mobile welder fix?</h3></summary><p class="ans">Most metalwork at a home or business: pipes, fences, gates, iron railings, window frames and custom metal pieces. We also handle shielded and non-shielded arc welding, custom welding and metal fabrication for residential, commercial and industrial customers.</p></details>
+        <details><summary><h3>How do I schedule a mobile welding appointment?</h3></summary><p class="ans">Request a free quote through our website, by phone at (504) 370-2757 or by email. Once you approve the quote, we schedule a time that is convenient for you, and our welders arrive with all the tools the job needs.</p></details>
+        <details><summary><h3>What areas do you serve near New Orleans?</h3></summary><p class="ans">We serve New Orleans plus Metairie, Kenner, Gretna, St. Rose, LaPlace, Slidell, Mandeville, Covington, Madisonville, Hammond and Baton Rouge. Each city has its own page on our site with more detail about local service.</p></details>
+        <details><summary><h3>What is the difference between mobile welding and shop welding?</h3></summary><p class="ans">Mobile welding comes to you. We bring the equipment to where the work is, so heavy materials stay put and downtime stays low. Shop welding means removing the piece and taking it to a fixed workshop, then bringing it back.</p></details>
+        <details><summary><h3>How do I pay once the job is done?</h3></summary><p class="ans">After the work is finished, we walk you through it to make sure it meets your expectations. Once you are satisfied, we provide easy payment options to finalize the service, and our team stays a call away for follow-up.</p></details>
+      </div>
+      <div class="ph"><img src="home/img/faq.webp" width="1000" height="1440" loading="lazy" alt="Gloved hand holding an electrode holder as sparks fly from a weld on a steel frame"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. CLOSING -->
+<section class="closing lazy" aria-labelledby="closing-h">
+  <img src="home/img/closing.webp" width="1920" height="1280" loading="lazy" alt="Two welders in helmets welding a large steel pipe in a fabrication bay">
+  <div class="wrap">
+    <div class="card">
+      <h2 id="closing-h">Book Your Free Mobile Welding <em>Estimate</em></h2>
+      <p>Tell us what needs welding, and we will bring the rig to your door anywhere in the New Orleans area.</p>
+      <div class="ctas">
+        <a class="btn pri" href="https://www.bigeasymobilewelders.com/contact/">Get a Free Estimate</a>
+        <a class="btn ghost-l" href="tel:+15043702757">Call (504) 370-2757</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft lazy">
+  <div class="wrap">
+    <div class="grid">
+      <div class="about">
+        <a class="logo" href="https://www.bigeasymobilewelders.com/"><img src="home/img/logo-240.png" width="240" height="202" loading="lazy" alt="Big Easy Mobile Welders logo"></a>
+        <p>At Big Easy Mobile Welders, we bring expert welding services right to your doorstep in New Orleans, for residential and commercial projects.</p>
+        <a class="tel" href="tel:+15043702757">(504) 370-2757</a>
+        <p class="hours">Monday to Friday, 8:00 AM to 3:00 PM<br>Serving New Orleans and 11 nearby cities</p>
+        <div class="social" aria-label="Social media">
+          <a href="https://www.facebook.com/people/Big-Easy-Mobile-Welders/100083230400915/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+          <a href="https://www.instagram.com/bigeasymobilewelders/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCdeONXdmirRzVTimxo8pyxA" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12c0 1.3.1 2.5.4 3.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.4-2.5.4-3.8s-.1-2.5-.4-3.8zM10 15.1V8.9l5.2 3.1z"/></svg></a>
+          <a href="https://www.linkedin.com/company/big-easy-mobile-welders/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.5 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 9h3v12H3zM9 9h2.9v1.7c.4-.8 1.4-1.9 3.4-1.9 3.6 0 4.2 2.4 4.2 5.4V21h-3v-6c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H9z"/></svg></a>
+          <a href="https://twitter.com/bigeasymobi" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a>
+        </div>
+      </div>
+      <div><p class="fh">Company</p><ul>
+        <li><a href="https://www.bigeasymobilewelders.com/about/">About</a></li><li><a href="https://www.bigeasymobilewelders.com/services/">Services</a></li><li><a href="https://www.bigeasymobilewelders.com/testimonials/">Testimonials</a></li><li><a href="https://www.bigeasymobilewelders.com/blog/">Blog</a></li><li><a href="https://www.bigeasymobilewelders.com/contact/">Contact</a></li>
+      </ul></div>
+      <div><p class="fh">Services</p><ul>
+        <li><a href="https://www.bigeasymobilewelders.com/mobile-welding/">Mobile Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/mobile-welding/pipe-welding/">Pipe Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/mobile-welding/fence/">Fence Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/mobile-welding/gate-welding/">Gate Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/mobile-welding/iron-railing-welding/">Iron Railing Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/arc-welding/">Arc Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/custom-welding/">Custom Welding</a></li><li><a href="https://www.bigeasymobilewelders.com/metal-fabrication/">Metal Fabrication</a></li>
+      </ul></div>
+      <div><p class="fh">Service Areas</p><ul>
+        <li><a href="https://www.bigeasymobilewelders.com/service-areas/metairie/">Metairie</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/kenner/">Kenner</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/gretna/">Gretna</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/slidell/">Slidell</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/mandeville/">Mandeville</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/covington/">Covington</a></li><li><a href="https://www.bigeasymobilewelders.com/service-areas/">All service areas</a></li>
+      </ul></div>
+    </div>
+    <div class="base">
+      <p>© Big Easy Mobile Welders. New Orleans, LA.</p>
+      <ul><li><a href="https://www.bigeasymobilewelders.com/sitemap/">Sitemap</a></li><li><a href="https://www.bigeasymobilewelders.com/terms-and-conditions/">Terms and Conditions</a></li><li><a href="https://www.bigeasymobilewelders.com/privacy-policy/">Privacy Policy</a></li><li><a href="https://www.bigeasymobilewelders.com/gdpr/">GDPR</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<button class="side-tab" type="button" data-estimate aria-haspopup="dialog" aria-controls="estimate">Get Your <b>Free Estimates</b> Now!</button>
+<dialog class="est" id="estimate" aria-labelledby="est-h">
+  <div class="top">
+    <h2 id="est-h">Get a Free Estimate</h2>
+    <button class="x" type="button" aria-label="Close" data-close>&times;</button>
+  </div>
+  <p class="sub">Tell us about the job and where it is. We bring the rig to you.</p>
+  <div class="frame">
+    <div class="fallback"><p>Loading the estimate form...</p><p>If it does not appear, use our <a href="https://www.bigeasymobilewelders.com/contact/">contact page</a>.</p></div>
+    <iframe id="bemw-estimate-frame" title="Free estimate form" data-src="https://api.leadconnectorhq.com/widget/form/hsHAe6wFVKNFPS5L6NOv"></iframe>
+  </div>
+  <p class="call">Prefer to talk? Call <a href="tel:+15043702757">(504) 370-2757</a></p>
+</dialog>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.bigeasymobilewelders.com/#localbusiness","name":"Big Easy Mobile Welders","url":"https://www.bigeasymobilewelders.com/","logo":"https://www.bigeasymobilewelders.com/wp-content/uploads/2022/04/logo.svg","telephone":"+15043702757","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"3436 Magazine Street #120-F","addressLocality":"New Orleans","addressRegion":"LA","postalCode":"70115","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":29.9224,"longitude":-90.0898},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"15:00"}],"areaServed":[{"@type":"City","name":"New Orleans, LA"},{"@type":"City","name":"Metairie, LA"},{"@type":"City","name":"Kenner, LA"},{"@type":"City","name":"Gretna, LA"},{"@type":"City","name":"St. Rose, LA"},{"@type":"City","name":"LaPlace, LA"},{"@type":"City","name":"Slidell, LA"},{"@type":"City","name":"Mandeville, LA"},{"@type":"City","name":"Covington, LA"},{"@type":"City","name":"Madisonville, LA"},{"@type":"City","name":"Hammond, LA"},{"@type":"City","name":"Baton Rouge, LA"}],"sameAs":["https://www.facebook.com/people/Big-Easy-Mobile-Welders/100083230400915/","https://twitter.com/bigeasymobi","https://www.instagram.com/bigeasymobilewelders/","https://www.youtube.com/channel/UCdeONXdmirRzVTimxo8pyxA","https://www.linkedin.com/company/big-easy-mobile-welders/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Mobile welding services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pipe Welding","url":"https://www.bigeasymobilewelders.com/mobile-welding/pipe-welding/","description":"Pipe and pipeline repair on site, with stick and gas-shielded processes matched to the pipe.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Fence Welding","url":"https://www.bigeasymobilewelders.com/mobile-welding/fence/","description":"Fence repairs and custom fence fabrication, with the material and process chosen for your fence.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Gate Welding","url":"https://www.bigeasymobilewelders.com/mobile-welding/gate-welding/","description":"Gate repairs and custom gates in steel or aluminum, with materials and tools covered in your estimate.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Iron Railing Welding","url":"https://www.bigeasymobilewelders.com/mobile-welding/iron-railing-welding/","description":"Custom indoor and outdoor railings for stairways, decks and balconies, built to fit your property.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Specialized Mobile Welding","url":"https://www.bigeasymobilewelders.com/mobile-welding/specialized-mobile-welding/","description":"Repair work at your home or office and custom metal pieces, whatever the size of the project.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Window Welding","url":"https://www.bigeasymobilewelders.com/mobile-welding/window-welding/","description":"Repairs for rusted and worn metal window frames, carried out at your home.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Arc Welding","url":"https://www.bigeasymobilewelders.com/arc-welding/","description":"Shielded and non-shielded arc welding for commercial and residential customers.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Welding","url":"https://www.bigeasymobilewelders.com/custom-welding/","description":"Custom ironwork, estimated before we start so we arrive with the right equipment for the job.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Metal Fabrication","url":"https://www.bigeasymobilewelders.com/metal-fabrication/","description":"Fabrication of all types of metal for residential, commercial and industrial settings.","provider":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"}}}]}},{"@type":"WebPage","@id":"https://www.bigeasymobilewelders.com/#webpage","url":"https://www.bigeasymobilewelders.com/","name":"Mobile Welding in New Orleans, LA | Big Easy Mobile Welders","about":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"},"mainEntity":{"@id":"https://www.bigeasymobilewelders.com/#localbusiness"},"hasPart":{"@id":"https://www.bigeasymobilewelders.com/#faq"},"inLanguage":"en-US"},{"@type":"FAQPage","@id":"https://www.bigeasymobilewelders.com/#faq","mainEntity":[{"@type":"Question","name":"Do mobile welders come to your house?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our mobile welders bring a fully equipped unit to your home or business anywhere in our New Orleans service area. Gates, fences, railings, pipes and frames get welded where they stand, so there is no hauling heavy material to a shop."}},{"@type":"Question","name":"Are your welders licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our team of welders is licensed, insured and highly trained. We handle everything from simple repairs to complex custom fabrications, and we bring the same standard to every job, large or small."}},{"@type":"Question","name":"How much does a mobile welder cost?","acceptedAnswer":{"@type":"Answer","text":"It depends on the job, so we start with a free, no-obligation estimate tailored to your project. Our pricing is transparent with no hidden fees, which means you know what to expect before any work begins."}},{"@type":"Question","name":"What can a mobile welder fix?","acceptedAnswer":{"@type":"Answer","text":"Most metalwork at a home or business: pipes, fences, gates, iron railings, window frames and custom metal pieces. We also handle shielded and non-shielded arc welding, custom welding and metal fabrication for residential, commercial and industrial customers."}},{"@type":"Question","name":"How do I schedule a mobile welding appointment?","acceptedAnswer":{"@type":"Answer","text":"Request a free quote through our website, by phone at (504) 370-2757 or by email. Once you approve the quote, we schedule a time that is convenient for you, and our welders arrive with all the tools the job needs."}},{"@type":"Question","name":"What areas do you serve near New Orleans?","acceptedAnswer":{"@type":"Answer","text":"We serve New Orleans plus Metairie, Kenner, Gretna, St. Rose, LaPlace, Slidell, Mandeville, Covington, Madisonville, Hammond and Baton Rouge. Each city has its own page on our site with more detail about local service."}},{"@type":"Question","name":"What is the difference between mobile welding and shop welding?","acceptedAnswer":{"@type":"Answer","text":"Mobile welding comes to you. We bring the equipment to where the work is, so heavy materials stay put and downtime stays low. Shop welding means removing the piece and taking it to a fixed workshop, then bringing it back."}},{"@type":"Question","name":"How do I pay once the job is done?","acceptedAnswer":{"@type":"Answer","text":"After the work is finished, we walk you through it to make sure it meets your expectations. Once you are satisfied, we provide easy payment options to finalize the service, and our team stays a call away for follow-up."}}]}]}</script>
+
+<script>
+(function(){
+  // Route map: schematic city positions, label offsets and anchors.
+  var hub=[236,150];
+  var cities=[
+    ["Baton Rouge",22,118,-8,-12,"start"],["Hammond",142,46,-7,4,"end"],["Madisonville",168,28,-7,-2,"end"],["Covington",206,16,7,-2,"start"],
+    ["Mandeville",256,40,8,4,"start"],["Slidell",318,84,-10,-12,"start"],["LaPlace",118,132,-7,4,"end"],["St. Rose",160,150,0,21,"middle"],
+    ["Kenner",190,128,-7,-4,"end"],["Metairie",214,124,2,-10,"middle"],["Gretna",246,182,8,4,"start"]
+  ];
+  var ns="http://www.w3.org/2000/svg";
+  document.querySelectorAll("svg.route").forEach(function(svg){
+    var sp=svg.querySelector(".spokes"),cg=svg.querySelector(".cities");
+    cities.forEach(function(c,k){
+      var p=document.createElementNS(ns,"path"),mx=(hub[0]+c[1])/2,my=Math.min(hub[1],c[2])-18;
+      p.setAttribute("d","M"+hub[0]+" "+hub[1]+" Q"+mx+" "+my+" "+c[1]+" "+c[2]);p.setAttribute("class","spoke");p.setAttribute("id","sp-"+k);sp.appendChild(p);
+      p.style.setProperty("--len",Math.ceil(p.getTotalLength()));
+      var d=document.createElementNS(ns,"circle");d.setAttribute("cx",c[1]);d.setAttribute("cy",c[2]);d.setAttribute("r",3.6);d.setAttribute("class","city");cg.appendChild(d);
+      var t=document.createElementNS(ns,"text");t.setAttribute("x",c[1]+c[3]);t.setAttribute("y",c[2]+c[4]);t.setAttribute("class","n");t.setAttribute("text-anchor",c[5]);t.textContent=c[0];cg.appendChild(t);
+    });
+  });
+  // Map motion. Everything is visible before it runs; it only replays the drawing.
+  document.querySelectorAll(".map").forEach(function(map){
+    var svg=map.querySelector("svg.route");if(!svg)return;
+    var hubDot=svg.querySelector(".hub"),ring=document.createElementNS(ns,"circle");
+    ring.setAttribute("cx",hub[0]);ring.setAttribute("cy",hub[1]);ring.setAttribute("r",6);ring.setAttribute("class","ring");
+    svg.insertBefore(ring,hubDot);
+    var rigs=document.createElementNS(ns,"g");rigs.setAttribute("class","rigs");svg.insertBefore(rigs,hubDot);
+    var routes=[[3,3.4],[5,3.0],[0,3.8],[10,2.4],[8,2.8],[2,3.6]],anims=[];
+    routes.forEach(function(r,i){
+      var g=document.createElementNS(ns,"g"),glow=document.createElementNS(ns,"circle"),dot=document.createElementNS(ns,"circle");
+      glow.setAttribute("r",6);glow.setAttribute("class","rig-glow");dot.setAttribute("r",2.6);dot.setAttribute("class","rig");
+      g.appendChild(glow);g.appendChild(dot);
+      var mo=document.createElementNS(ns,"animateMotion");
+      mo.setAttribute("dur",r[1]+"s");mo.setAttribute("begin","indefinite");mo.setAttribute("repeatCount","indefinite");
+      mo.setAttribute("calcMode","spline");mo.setAttribute("keyTimes","0;1");mo.setAttribute("keyPoints","0;1");mo.setAttribute("keySplines",".45 0 .55 1");
+      var mp=document.createElementNS(ns,"mpath");mp.setAttribute("href","#sp-"+r[0]);mo.appendChild(mp);
+      var op=document.createElementNS(ns,"animate");
+      op.setAttribute("attributeName","opacity");op.setAttribute("values","0;1;1;0");op.setAttribute("keyTimes","0;.12;.85;1");
+      op.setAttribute("dur",r[1]+"s");op.setAttribute("begin","indefinite");op.setAttribute("repeatCount","indefinite");
+      g.setAttribute("opacity","0");g.appendChild(mo);g.appendChild(op);rigs.appendChild(g);anims.push([mo,op,i*0.55]);
+    });
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver" in window))return;
+    var spokes=svg.querySelectorAll(".spoke"),dots=svg.querySelectorAll(".city");
+    var io=new IntersectionObserver(function(es){
+      if(!es[0].isIntersecting)return;io.disconnect();
+      spokes.forEach(function(s,i){setTimeout(function(){s.classList.add("draw");if(dots[i])dots[i].classList.add("pop");},i*90);});
+      setTimeout(function(){
+        map.classList.add("live");
+        anims.forEach(function(a){try{a[0].beginElementAt(a[2]);a[1].beginElementAt(a[2]);}catch(e){}});
+      },spokes.length*90+700);
+      setTimeout(function(){spokes.forEach(function(s){s.classList.remove("draw");});dots.forEach(function(d){d.classList.remove("pop");});},spokes.length*90+1600);
+    },{threshold:.35});
+    io.observe(map);
+  });
+  var tab=document.querySelector(".side-tab");
+  if(tab&&!window.matchMedia("(prefers-reduced-motion: reduce)").matches){tab.classList.add("in");setTimeout(function(){tab.classList.remove("in");},1800);}
+  // Free estimate popup: the client's own Popup Contact Form. Loads on first open; own id so form_embed.js cannot hijack it.
+  var dlg=document.getElementById("estimate");
+  if(dlg&&dlg.showModal){
+    var fr=document.getElementById("bemw-estimate-frame");
+    document.querySelectorAll("[data-estimate]").forEach(function(el){
+      el.addEventListener("click",function(e){e.preventDefault();if(fr&&!fr.getAttribute("src")){fr.setAttribute("src",fr.dataset.src);}dlg.showModal();});
+    });
+    dlg.querySelector("[data-close]").addEventListener("click",function(){dlg.close();});
+    dlg.addEventListener("click",function(e){if(e.target===dlg){dlg.close();}});
+  }
+  // Page motion: reveal on scroll. Delay lives in CSS (--d with a backwards fill); the class is removed after the run (L-124).
+  (function(){
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    var groups=[".head h2",".head .answer",".trust li",".svc li",".steps li",".proc .ph",".who article",".why .ph",".why .col > h2",".why .answer",".reasons li",".revs figure",".more",".tips > a",".city-links li",".area-cta",".map",".faq details",".faq .ph",".closing .card",".ft .grid > div"];
+    var items=[];
+    groups.forEach(function(sel){
+      var byParent=new Map();
+      document.querySelectorAll(sel).forEach(function(el){
+        var p=el.parentElement,n=byParent.get(p)||0;byParent.set(p,n+1);
+        var d=Math.min(n,8)*70+((sel===".head .answer"||sel===".why .answer")?120:0);
+        el.style.setProperty("--d",d+"ms");items.push(el);
+      });
+    });
+    document.querySelectorAll(".hero .panel > *").forEach(function(el,i){
+      el.style.setProperty("--d",(i*90)+"ms");el.classList.add("rv-hero");
+      setTimeout(function(){el.classList.remove("rv-hero");},1600);
+    });
+    if(!("IntersectionObserver" in window))return;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var el=e.target;io.unobserve(el);el.classList.add("rv-go");
+        var d=parseInt(el.style.getPropertyValue("--d"),10)||0;
+        setTimeout(function(){el.classList.remove("rv-go");},d+1400);
+      });
+    },{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+    items.forEach(function(el){io.observe(el);});
+  })();
+  // Mobile menu.
+  var b=document.querySelector(".hd .menu");
+  if(b){b.addEventListener("click",function(){var h=b.closest(".hd"),o=h.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");b.textContent=o?"Close":"Menu";});}
+  // Signature: the weld bead runs once on load. Content never depends on it; a failsafe clears it.
+  // Hero video: mobile poster, and no motion for reduced-motion visitors.
+  var hv=document.querySelector(".hero video");
+  if(hv){
+    if(window.matchMedia("(max-width:900px)").matches){hv.setAttribute("poster","home/video/hero-poster-m.webp");}
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){hv.removeAttribute("autoplay");hv.pause();}
+  }
+  var hero=document.querySelector(".hero");
+  if(hero){hero.classList.add("play");setTimeout(function(){hero.classList.remove("play");},3200);}
+})();
+</script>
+
+</body>
+</html>
