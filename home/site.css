@@ -465,3 +465,12 @@ html:not(.ready) *,html:not(.ready) *::before,html:not(.ready) *::after{transiti
 @media (max-width:600px){
   .revs.five figure,.posts > *{flex-basis:100%}
 }
+/* service pages: centred point rows (3 per row), stacked points inside a split, short inline form */
+.points.flex{display:flex;flex-wrap:wrap;justify-content:center}
+.points.flex>li{flex:0 0 calc((100% - 32px)/3)}
+.points.stack{display:flex;flex-direction:column;gap:14px}
+.formband.short .formbox,.formband.short .formbox iframe{min-height:var(--form-h,1090px)}
+@media (max-width:900px){.points.flex>li{flex-basis:calc((100% - 16px)/2)}}
+@media (max-width:600px){.points.flex>li{flex-basis:100%}}
+@media (max-width:600px){.formband.short{--form-h:1320px}}
+.formband.short{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.formband.short .formbox{background:#fff}
